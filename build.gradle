@@ -1,0 +1,50 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.4'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.pwc.test'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+	springBootVersion = '2.5.4'
+
+	// implementation dependencies
+	commonsLangVersion = '3.12.0'
+	jacksonVersion = '2.12.5'
+	jGraphTVersion = '1.5.1'
+	logbackVersion = '1.2.6'
+	lombokVersion = '1.18.20'
+	slf4jVersion = '1.7.32'
+
+	// test dependencies
+	hamcrestVersion = '2.2'
+	mockitoVersion = '3.12.4'
+}
+
+dependencies {
+	compileOnly "org.projectlombok:lombok:$lombokVersion"
+
+	implementation "org.apache.commons:commons-lang3:$commonsLangVersion"
+	implementation "org.jgrapht:jgrapht-core:$jGraphTVersion"
+	implementation "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
+	implementation "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+	implementation "ch.qos.logback:logback-core:$logbackVersion"
+	implementation "org.slf4j:slf4j-api:$slf4jVersion"
+
+	testImplementation "org.springframework.boot:spring-boot-starter-test:$springBootVersion"
+	testImplementation "org.hamcrest:hamcrest:$hamcrestVersion"
+	testImplementation "org.mockito:mockito-core:$mockitoVersion"
+
+	annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+}
+
+test {
+	useJUnitPlatform()
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "cca3": "CZE",
+    "borders": [
+      "AUT",
+      "SVK"
+    ]
+  },
+  {
+    "cca3": "SVK",
+    "borders": [
+      "AUT",
+      "CZE",
+      "HUN"
+    ]
+  },
+  {
+    "cca3": "HUN",
+    "borders": [
+      "SVK",
+      "AUT"
+    ]
+  },
+  {
+    "cca3": "AUT",
+    "borders": [
+      "ITA",
+      "CZE",
+      "HUN",
+      "SVK"
+    ]
+  },
+  {
+    "cca3": "ITA",
+    "borders": [
+      "AUT"
+    ]
+  },
+  {
+    "cca3": "FIN",
+    "borders": [
+      "NOR"
+    ]
+  },
+  {
+    "cca3": "NOR",
+    "borders": [
+      "FIN"
+    ]
+  }
+]
